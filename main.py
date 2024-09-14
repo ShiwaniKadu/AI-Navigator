@@ -28,7 +28,7 @@ def aiProcess(command):
     completion = client.chat_completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a virtual assistant named jarvis skilled in general tasks."},
+            {"role": "system", "content": "You are a virtual assistant named Aura skilled in general tasks."},
             {"role": "user", "content": command}
         ]
     )
@@ -75,7 +75,7 @@ if __name__ == "__main__":
             if word.lower() == "jarvis":
                 speak("Ya")
                 with sr.Microphone() as source:
-                    print("Jarvis Active...")
+                    print("Aura Active...")
                     audio = recognizer.listen(source)
                     command = recognizer.recognize_google(audio)
                     processCommand(command)
